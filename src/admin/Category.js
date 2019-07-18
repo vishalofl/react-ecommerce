@@ -1,12 +1,9 @@
 import React , { useState }from 'react';
 import {Link, Redirect} from 'react-router-dom';
-import './sb-admin-2.css';
 
 import Sidebar from './Sidebar';
-
 import Navbar from './Navbar';
 import Footer from './Footer';
-
 
 
 const Category = ()=>{

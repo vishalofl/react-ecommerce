@@ -1,7 +1,4 @@
 import React from 'react';
-
-import './App.css';
-
 import { BrowserRouter, Switch ,Route, Link } from "react-router-dom";
 
 
@@ -12,9 +9,7 @@ import Footer from "./client/partials/Footer";
 import Home from './client/home/Home';
 import Homeone from './client/home/Homeone';
 import Details from './client/details/Details';
-
 import Cart from './client/cart/Cart';
-
 import Checkout from './client/checkout/Checkout';
 import ClientLogin from './client/login-register/ClientLogin';
 import ClientRegister from './client/login-register/ClientRegister';
@@ -51,16 +46,7 @@ function App() {
 
           
 
-          {/*admin*/}
-
-          {/*<Route path="/" exact component={Login} />
-          <Route path="/category" exact component={Category} />
-          <Route path="/category-form" exact component={CategoryForm} />
-
-          <Route path="/product" exact component={Product} />
-          <Route path="/product-form" exact component={ProductForm} />*/}
           
-          {/*<Route path="/login" exact component={Login} />*/}
 
           </Switch>
           <Footer/> 
