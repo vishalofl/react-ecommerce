@@ -32,13 +32,13 @@ function Footer() {
             </div>
             <footer className="pt-5 px-5 bg-light">
                 
-            	<div class="row">
-					<div class="col-md-3 col-lg-3 col-xl-3">
-						<div class="tt-mobile-collapse">
-							<h5 class="custom-text-dark">
+            	<div className="row">
+					<div className="col-md-3 col-lg-3 col-xl-3">
+						<div className="tt-mobile-collapse">
+							<h5 className="custom-text-dark">
 								CATEGORIES
 							</h5>
-							<div class="footer-list ">
+							<div className="footer-list ">
 								<p ><a className="text-dark" href="listing-collection.html">Women</a></p>
 								<p><a className="text-dark" href="listing-collection.html">Men</a></p>
 								<p><a className="text-dark" href="listing-collection.html">Accessories</a></p>
@@ -49,12 +49,12 @@ function Footer() {
 						</div>
 					</div>
 
-					<div class="col-md-3 col-lg-3 col-xl-3">
-						<div class="tt-mobile-collapse">
-							<h5 class="custom-text-dark">
+					<div className="col-md-3 col-lg-3 col-xl-3">
+						<div className="tt-mobile-collapse">
+							<h5 className="custom-text-dark">
 								BUY WITH US
 							</h5>
-							<div class="footer-list ">
+							<div className="footer-list ">
 								<p ><a className="text-dark" href="listing-collection.html">About Us</a></p>
 								<p><a className="text-dark" href="listing-collection.html">Services</a></p>
 								<p><a className="text-dark" href="listing-collection.html">Contact Us</a></p>
@@ -65,23 +65,23 @@ function Footer() {
 						</div>
 					</div>
 
-					<div class="col-md-3 col-lg-3 col-xl-3">
-						<div class="tt-mobile-collapse">
-							<h5 class="custom-text-dark">
+					<div className="col-md-3 col-lg-3 col-xl-3">
+						<div className="tt-mobile-collapse">
+							<h5 className="custom-text-dark">
 								ABOUT
 							</h5>
-							<div class="footer-list">
+							<div className="footer-list">
 								<p className="text-dark">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tempor incididunt.</p>
 							</div>
 						</div>
 					</div>
 
-					<div class="col-md-3 col-lg-3 col-xl-3">
-						<div class="tt-mobile-collapse">
-							<h5 class="custom-text-dark">
+					<div className="col-md-3 col-lg-3 col-xl-3">
+						<div className="tt-mobile-collapse">
+							<h5 className="custom-text-dark">
 								CONTACT US
 							</h5>
-							<div class="footer-list">
+							<div className="footer-list">
 								<p className="text-dark">ADDRESS: 7895 Piermont Dr NE Albuquerque, NM 198866, United States of America</p>
 								
 								<p className="text-dark">PHONE: +566 4774 9930; +566 4774 9940</p>

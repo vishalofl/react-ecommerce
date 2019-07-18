@@ -2,15 +2,18 @@ import React,{ useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import "./Home.css";
 
+
+
 function Homeone() {
 
     return (
 
         <div>
+
             <div className="container-fluid">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+               {/* <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                   Launch demo modal
-                </button>
+                </button>*/}
 
                 <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg" role="document">
@@ -92,7 +95,7 @@ function Homeone() {
                 <div className="row">
                     <div className="col-sm-12">
                         <h5 className="text-center custom-text-dark-panel">TRENDING</h5>
-                        <h6 className="text-center custom-text-dark">Top View In This Week</h6>
+                        <h6 className="text-center custom-text-dark">Top View In This Week </h6>
                     </div>
                     <br/>
                     <div className="col-lg-3 col-md-6 mb-4 product-block">
