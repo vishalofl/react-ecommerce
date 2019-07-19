@@ -1,25 +1,4 @@
 
-html{
-  font-family: sans-serif;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent;
-}
-
-body{
-
-    font-family: 'Hind', sans-serif !important;
-    font-size: 14px !important;
-    line-height: 1.1 !important;
-    color: #191919 !important;
-    font-weight: 400 !important;
-    display: -ms-inline-flexbox;
-    display: -webkit-inline-flex;
-    display: inline-flex;
-}
-
 .custom-text-dark{
     color: #000000 !important;
     font-size: 20px;
