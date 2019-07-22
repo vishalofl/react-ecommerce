@@ -35,6 +35,8 @@ const imgData = [
 
 function Details() {
 	
+	const [qtyCount, setQtyCount] = useState(1);
+
 	const settings = {
     	dots: false,
       	infinite: true,
@@ -47,9 +49,7 @@ function Details() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     useEffect( () => {
-    	
     	setThumbnail(imgData);
-    
     },[])
 
     const renderThumbnail = () =>{
@@ -64,8 +64,9 @@ function Details() {
                         largeImage: {
                             src: thumbnail[activeIndex]['imgUrl'],
                             width: 1200,
-                            height: 1800,
-                        }
+                            height: 1200,
+                        },
+                        enlargedImagePortalId:'display-zoom-img'
                     }} />
 	    		)
 	    }
@@ -96,6 +97,7 @@ function Details() {
 			    	</div>
 			    </div>
 			    <div className="col-md-6">
+			      	<div id="display-zoom-img"></div>
 			      	<div>
 						<div>
 							<p><span>SKU:</span> 001</p>
@@ -120,27 +122,103 @@ function Details() {
 								QTY : 
 							</div>
 							<div className="col-md-4">
-								<input type="txet" className="form-control" value="1" />
+								<div className="row">
+									<div className="col-md-3 pr-0">
+										<button type="button" class="btn btn-light btn-lg w-100" onClick={() => setQtyCount(qtyCount - 1)} disabled={ (qtyCount <= 0) ? 'disabled' : ''  } > - </button>
+									</div>									
+									
+									<div className="col-md-6 pl-0 pr-0">
+										<input type="text" className="form-control form-control-lg bg-light text-center" value={ qtyCount } readonly />
+									</div>									
+
+									<div className="col-md-3 pl-0">
+										<button type="button" class="btn btn-light btn-lg w-100" onClick={ () => setQtyCount(qtyCount + 1) }> + </button>
+									</div>
+								</div>
 							</div>
 							<div className="col-md-6">
 								<button type="button" class="btn btn-primary btn-lg mr-2 rounded w-100"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
 							</div>
 						</div>
+
+						
 
 						<div class="row mt-5">
-							<div className="col-md-6">
-								<a> Add to WISH LIST </a>
-								
-								<input type="txet" className="form-control" value="1" />
-							</div>
-							<div className="col-md-6">
-								<button type="button" class="btn btn-primary btn-lg mr-2 rounded w-100"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+							<div className="col-md-12">
+								<button type="button" class="btn btn-warning btn-lg mr-2 rounded w-100">BUY IT NOW</button>
 							</div>
 						</div>
+						
+						<div class="row mt-5">
+							<div className="col-md-12">
+								<div id="accordion2">
+		                            <div class="sidebar-header" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="headingOne">
+		                                    DESCRIPTION
+		                                <span className="float-right">
+		                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+		                                </span>
+		                            </div>
 
-						<div>
-							<a class="btn btn-primary" href="#"><i class="icon-n-072"></i>ADD TO WISH LIST</a>
-							<a class="btn btn-primary" href="#"><i class="icon-n-08"></i>ADD TO COMPARE</a>
+		                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion2">
+		                                <br/>
+		                                <p>We are proud to present our best premium Shopify theme - Wokiee.</p>
+
+		                                <p>
+		                                	This is multi-purpose software that can be used for any type of the store. Great variety of available options will make customization process very easy.
+		                                </p>
+
+		                                <p>Please, take a look at feature list and compare with our competitors.</p>
+
+		                                <p>Wokiee support DropShipping app Oberlo.</p>
+										<p>Wokiee Shopify theme is powerfool tool to create personal webshop.</p>
+		                            </div>
+
+		                            <div class="sidebar-header" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" id="headingTwo">
+		                                GENERAL TAB
+		                                <span className="float-right">
+		                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+		                                </span>
+		                            </div>
+
+		                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion2">
+		                                <ul class="list-group list-group-flush">
+		                                    <li class="list-group-item">5 item</li>
+		                                    <li class="list-group-item">6 item</li>
+		                                    <li class="list-group-item">7 item</li>
+		                                    <li class="list-group-item">8 item</li>
+		                                </ul>
+		                            </div>
+		                            <div class="sidebar-header" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="headingThree">
+		                                 REVIEW
+		                                <span className="float-right">
+		                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+		                                </span>
+		                            </div>
+		                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion2">
+		                                <ul class="list-group list-group-flush">
+		                                    <li class="list-group-item">
+		                                    	<h3 className="custom-text-dark">
+		                                    		CUSTOMER REVIEWS <br/>
+		                                    		<small className="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734; <a href="#">Based on 3 reviews</a></small>
+		                                    	</h3>
+		                                    </li>
+		                                    <li class="list-group-item">
+		                                    	<small className="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+		                                    	<h5 className="custom-text-dark">LOVE IT!</h5>
+		                                    	<small>Annon Emuss on Apr 25, 2019</small>
+		                                    	<p>Nice, simply the best.</p>
+		                                    </li>
+
+		                                    <li class="list-group-item">
+		                                    	<small className="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+		                                    	<h5 className="custom-text-dark">BEST</h5>
+		                                    	<small>aa Das on Apr 25, 2019</small>
+		                                    	<p>The quick brown fox jump over the lazy dog</p>
+		                                    </li>
+		                                </ul>
+		                            </div>
+		                        </div>
+							</div>
 						</div>
 					</div>
 			    </div>
