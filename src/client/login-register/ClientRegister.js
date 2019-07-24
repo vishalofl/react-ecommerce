@@ -19,20 +19,29 @@ function ClientRegister() {
 
 
 	const handleChange = (name) => (event) => {
+
 		setValues({...values, error:false, [name]: event.target.value })
 	}
 
-	const { firstname,lastname,email,password, success, error } = values; 
+	const { firstname, lastname, email, password, success, error } = values; 
 
 	const clickSubmit = (e) => {
+
 		e.preventDefault();
 
-		signup({firstname,lastname,email,password}).then(data => {
+		const userFormData = {firstname,lastname,email,password}
+
+		signup(userFormData).then(data => {
+
 			if (data.error) {
 				setValues({ ...values, error:data.error, success:false })
 			} else {
 				setValues({ ...values, firstname:'', lastname:'', email:'', password:'', error:'', success:true })
 			}
+		}).catch((err) => {
+
+			console.log(err)
+		
 		})
 	}
 
@@ -42,25 +51,19 @@ function ClientRegister() {
 
 	const signup = (user) => {
 
-		const userData = JSON.stringify(user);
-		
-		console.log(userData);
-
-		// axios.post(`${API}/signup`,{data: userData},{headers: headers}).then((res)=>{
-		
-		// 	console.log(res);
-		// 	//on success
-		
-		// }).catch((error)=>{
-		// 	//on error
-		// 	console.log(error);
-		// })
-
-		// axios.get('https://jsonplaceholder.typicode.com/users').then(res =>{
-
-		// 	console.log(res);
-		// })
-
+		return axios({
+	  			url: `${API}/signup`,
+	  			method: 'post',
+	  			data: user
+			})
+			.then(function (resp) {
+				
+			    return resp.data;
+			})
+			.catch(function (error) {
+			   // your action on error success
+			    console.log(error);
+			});
 	}
 
 
@@ -104,7 +107,6 @@ function ClientRegister() {
 		</div>
 	)
 
-
     return (
     		<div className="container-fluid details_page">
                 <div className="row bg-white py-4">
@@ -116,8 +118,8 @@ function ClientRegister() {
 						  	<div className="card-body px-5">
 						  		<h5 className="custom-text-dark">PERSONAL INFORMATION</h5>
 						  		
-						  		{showSuccess()}
 						  		{showError()}
+						  		{showSuccess()}
 						  		{RegisterForm()}
 						  	
 						  	</div>

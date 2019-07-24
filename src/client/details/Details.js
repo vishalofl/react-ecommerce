@@ -69,7 +69,12 @@ function Details() {
                             width: 1200,
                             height: 1200,
                         },
-                        enlargedImagePortalId:'display-zoom-img'
+                        enlargedImagePortalId:'display-zoom-img',
+                        isHintEnabled:true,
+						lensStyle: {
+							background: 'hsla(0, 0%, 100%, .3)'
+						}
+						
                     }} />
 	    		)
 	    }
@@ -162,7 +167,7 @@ function Details() {
 		                                </span>
 		                            </div>
 
-		                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion2">
+		                            <div id="collapseOne" class="collapse show pl-4" aria-labelledby="headingOne" data-parent="#accordion2">
 		                                <br/>
 		                                <p>We are proud to present our best premium Shopify theme - Wokiee.</p>
 
@@ -232,25 +237,25 @@ function Details() {
 		  	<div className="row">
 		    	<div className="col-md-3 col-sm-6 mb-4">
 		      		<Link to="#">
-		            	<img className="img-fluid" src="http://placehold.it/500x300" alt="" />
+		            	<img className="img-fluid" src="https://images.unsplash.com/photo-1444927714506-8492d94b4e3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80" alt="" />
 		          	</Link>
 		    	</div>
 
 		    	<div className="col-md-3 col-sm-6 mb-4">
 		      		<Link to="#">
-		            	<img className="img-fluid" src="http://placehold.it/500x300" alt="" />
+		            	<img className="img-fluid" src="https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" />
 		          	</Link>
 		    	</div>
 
 		    	<div className="col-md-3 col-sm-6 mb-4">
 		      		<Link to="#">
-		            	<img className="img-fluid" src="http://placehold.it/500x300" alt="" />
+		            	<img className="img-fluid" src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" />
 		          	</Link>
 		    	</div>
 
 		    	<div className="col-md-3 col-sm-6 mb-4">
 		      		<Link to="#">
-		            	<img className="img-fluid" src="http://placehold.it/500x300" alt="" />
+		            	<img className="img-fluid" src="https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" />
 		          	</Link>
 		    	</div>
 
