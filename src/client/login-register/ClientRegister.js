@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
 import { Link } from "react-router-dom";
-import axios from 'axios';
-
-import {API} from "../config/config.js";
-
+import { signup } from './apicall';
 
 
 function ClientRegister() {
@@ -19,7 +16,6 @@ function ClientRegister() {
 
 
 	const handleChange = (name) => (event) => {
-
 		setValues({...values, error:false, [name]: event.target.value })
 	}
 
@@ -28,6 +24,9 @@ function ClientRegister() {
 	const clickSubmit = (e) => {
 
 		e.preventDefault();
+
+		setValues({...values, error:false })
+
 
 		const userFormData = {firstname,lastname,email,password}
 
@@ -39,31 +38,8 @@ function ClientRegister() {
 				setValues({ ...values, firstname:'', lastname:'', email:'', password:'', error:'', success:true })
 			}
 		}).catch((err) => {
-
 			console.log(err)
-		
 		})
-	}
-
-	var headers = {
-        'Content-Type': 'application/json'
-    }
-
-	const signup = (user) => {
-
-		return axios({
-	  			url: `${API}/signup`,
-	  			method: 'post',
-	  			data: user
-			})
-			.then(function (resp) {
-				
-			    return resp.data;
-			})
-			.catch(function (error) {
-			   // your action on error success
-			    console.log(error);
-			});
 	}
 
 
@@ -71,23 +47,23 @@ function ClientRegister() {
 
 		<form>
 	  		<div className="form-group">
-              	<label htmlFor="firstName" className="small">FRIST NAME <sup>*</sup></label>
+              	<label htmlFor="firstName" className="small">FRIST NAME <sup className="text-danger">*</sup></label>
               	<div className="text-muted float-right">* Required Fields</div>
               	<input type="text" onChange={handleChange('firstname')} value={firstname} className="form-control bg-light" id="firstName" placeholder="Enter First Name" autoComplete="off" />
             </div>
 
             <div className="form-group">
-              	<label htmlFor="lastName" className="small">LAST NAME <sup>*</sup></label>
+              	<label htmlFor="lastName" className="small">LAST NAME </label>
               	<input type="text" onChange={handleChange('lastname')} value={lastname} className="form-control bg-light" id="lastName" placeholder="Enter First Name" autoComplete="off" />
             </div>
 
             <div className="form-group">
-              	<label htmlFor="email" className="small">EMAIL<sup>*</sup></label>
+              	<label htmlFor="email" className="small">EMAIL<sup className="text-danger">*</sup></label>
               	<input type="email" onChange={handleChange('email')} value={email} className="form-control bg-light" id="email" placeholder="Enter Email" autoComplete="off" />
             </div>
 
             <div className="form-group">
-              	<label htmlFor="password" className="small">PASSWORD<sup>*</sup></label>
+              	<label htmlFor="password" className="small">PASSWORD<sup className="text-danger">*</sup></label>
               	<input type="password" onChange={handleChange('password')} value={password} className="form-control bg-light" id="password" placeholder="Enter Password" autoComplete="off" />
             </div>
 	  		<button type="button" onClick={clickSubmit} className="btn btn-outline-primary"> CREATE ACCOUNT</button>
@@ -103,7 +79,7 @@ function ClientRegister() {
 
 	const showSuccess = () => (
 		<div className="alert alert-success" style={{ display: success ? '' : 'none'}}>
-			New Account is Created. Please SIgn in.
+			New Account is Created. Please <Link to="/login">SIgn in.</Link>
 		</div>
 	)
 
@@ -123,7 +99,6 @@ function ClientRegister() {
 						  		{RegisterForm()}
 						  	
 						  	</div>
-						  	{JSON.stringify(values)}
 						</div>
                     </div>
                 </div>

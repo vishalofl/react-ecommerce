@@ -1,0 +1,20 @@
+.sticky {
+  	position: fixed !important;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+	-webkit-transition: all 0.5s ease;
+  -moz-transition: position 10s;
+  -ms-transition: position 10s;
+  -o-transition: position 10s;
+  transition: all 0.5s ease;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+
+
+/*.dropdown-toggle::after {
+    display:none !important;
+}*/
