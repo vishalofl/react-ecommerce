@@ -61,7 +61,22 @@ label{
     left: 0;
     right: 0;
     padding: 15px;
-    /*margin-top: -13px !important;*/
+    margin-top: 0px !important;
+}
+
+.custom-li{
+  padding: 0px;
+}
+
+.custom-li li {
+  list-style: none;
+  padding: 7px 0px;
+  text-transform: capitalize;
+}
+
+.custom-li li a {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 

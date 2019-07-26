@@ -14,9 +14,11 @@ import Checkout from './client/checkout/Checkout';
 import ClientLogin from './client/login-register/ClientLogin';
 import ClientRegister from './client/login-register/ClientRegister';
 
+import Dashboard from './client/dashboard/Dashboard';
+
 /*ADMIN ROUTES*/
 import Login from './admin/Login';
-import Dashboard from './admin/Dashboard';
+// import Dashboard from './admin/Dashboard';
 import Category from './admin/Category';
 import CategoryForm from './admin/CategoryForm';
 import Product from './admin/Product';
@@ -42,6 +44,7 @@ function App() {
           <Route path="/checkout" exact component={Checkout} />
           <Route path="/register" exact component={ClientRegister} />
           <Route path="/login" exact component={ClientLogin} />
+          <Route path="/dashboard" exact component={Dashboard} />
           
 
           

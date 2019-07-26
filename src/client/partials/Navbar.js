@@ -25,8 +25,7 @@ function Navbar({ history }) {
             if (isTop !== true ) {
                   setHeaderText(true);
             } else {
-
-                  setHeaderText(false);
+                setHeaderText(false);
             }
         });
         return () => {
@@ -36,7 +35,7 @@ function Navbar({ history }) {
 
     return (
         <div>
-            <nav className= { "navbar navbar-expand-lg navbar-white bg-white " + ( (whenNotFixed) ? 'sticky' : '') } >
+            <nav className= { "navbar navbar-expand-lg navbar-white bg-white custom-navbar " + ( (whenNotFixed) ? 'sticky' : '') } >
                 <Link className="navbar-brand" to="/">
                     <img className="d-block img-fluid" src="/assets/images/logo.png"  style={{"height":"35px"}} />
                 </Link>
@@ -54,29 +53,35 @@ function Navbar({ history }) {
 
                         <li class="nav-item dropdown megamenu-li">
                            <a class="nav-link" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MEGA MENU</a>
-                           <div class="dropdown-menu megamenu" aria-labelledby="dropdown01">
+                           <div class="dropdown-menu megamenu px-5" aria-labelledby="dropdown01">
                                 <div class="row">
-                                 <div class="col-sm-6 col-lg-3">
-                                      <h5>Links</h5>
-                                      <a class="dropdown-item" href="#">Another action</a>
-                                      <a class="dropdown-item" href="#">Something else here</a>
-                                      <a class="dropdown-item" href="#">Another action</a>
-                                      <a class="dropdown-item" href="#">Something else here</a>
-                                 </div>
-                                 <div class="col-sm-6 col-lg-3">
-                                  <h5>More Links</h5>
-                                  <a class="dropdown-item" href="#">Another action</a>
-                                  <a class="dropdown-item" href="#">Something else here</a>
-                                  <a class="dropdown-item" href="#">Another action</a>
-                                 </div>
-                                 <div class="col-sm-6 col-lg-3">
-                                  <h5>Paragraph</h5>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus in veritatis, facilis eligendi sunt, culpa autem harum porro earum.</p>
-                                 </div>
-                                 <div class="col-sm-6 col-lg-3">
-                                  <h5>Image</h5>
-                                  
-                                 </div>
+                                    <div class="col-sm-6 col-lg-3">
+                                        <h5>Links</h5>
+                                        <ul class="custom-li">
+                                            <li> <Link>Cras justo odio</Link></li>
+                                            <li><Link> Dapibus ac facilisis in</Link></li>
+                                            <li><Link> Morbi leo risus</Link></li>
+                                            <li><Link> Porta ac consectetur ac</Link></li>
+                                            <li><Link> Vestibulum at eros</Link></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-3">
+                                        <h5>Links</h5>
+                                        <ul class="custom-li">
+                                            <li> <Link>Cras justo odio</Link></li>
+                                            <li><Link> Dapibus ac facilisis in</Link></li>
+                                            <li><Link> Morbi leo risus</Link></li>
+                                            <li><Link> Porta ac consectetur ac</Link></li>
+                                            <li><Link> Vestibulum at eros</Link></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-3">
+                                        <h5>Paragraph</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus in veritatis, facilis eligendi sunt, culpa autem harum porro earum.</p>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-3">
+                                        <h5>Image</h5>
+                                    </div>
                                 </div>
                            </div>
                           </li>

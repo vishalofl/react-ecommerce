@@ -22,6 +22,17 @@
     pointer-events: none;
 }
 
+.custom-navbar{
+  padding: 0px !important;
+}
+
+.nav-item a {
+  padding: 0px !important;
+}
+
+.nav-item {
+  padding: 18px 7px !important;
+}
 
 /*.dropdown-toggle::after {
     display:none !important;
