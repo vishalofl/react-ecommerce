@@ -10,6 +10,7 @@
     "react-dom": "^16.8.6",
     "react-image-magnify": "^2.7.4",
     "react-router-dom": "^5.0.1",
+    "react-router-scroll-top": "^0.2.1",
     "react-scripts": "3.0.1",
     "react-slick": "^0.24.0",
     "slick-carousel": "^1.8.1"

@@ -4,16 +4,12 @@ import "./Home.css";
 
 function Home() {
 
-        // $('#sidebarCollapse').on('click', function () {
-        //         $('#sidebar').toggleClass('active');
-        // });
-
     return (
 
         <div>
             <div className="container-fluid details_page">
                 <div className="row bg-white pt-3">
-                    <div className="col-lg-3" id="sidebar">
+                    <div className="col-lg-2" id="sidebar">
                         <div id="accordion">
                             <div className="sidebar-header" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="headingOne">
                                     COLLECTIONS
@@ -92,7 +88,7 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className="col-lg-9" >
+                    <div className="col-lg-10" >
                         <div className="row">
                             <div className="col-6">
                                 <h3 className="custom-text-dark">Trending (12)</h3>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch ,Route, Link } from "react-router-dom";
+import ScrollToTop from 'react-router-scroll-top'
 
 
 /*CLIENT ROUTES*/
@@ -13,8 +14,12 @@ import Cart from './client/cart/Cart';
 import Checkout from './client/checkout/Checkout';
 import ClientLogin from './client/login-register/ClientLogin';
 import ClientRegister from './client/login-register/ClientRegister';
+import Account from './client/dashboard/Account';
+import Orders from './client/dashboard/Orders';
+import Address from './client/dashboard/Address';
+import OrderDetails from './client/dashboard/OrderDetails';
 
-import Dashboard from './client/dashboard/Dashboard';
+import WishList from './client/dashboard/WishList';
 
 /*ADMIN ROUTES*/
 import Login from './admin/Login';
@@ -32,6 +37,7 @@ function App() {
   return (
 
       <BrowserRouter>
+      <ScrollToTop>
           <Navbar/>
           <Switch>
           <Route path="/" exact component={Homeone} />
@@ -44,16 +50,16 @@ function App() {
           <Route path="/checkout" exact component={Checkout} />
           <Route path="/register" exact component={ClientRegister} />
           <Route path="/login" exact component={ClientLogin} />
-          <Route path="/dashboard" exact component={Dashboard} />
-          
-
-          
-
+          <Route path="/account" exact component={Account} />
+          <Route path="/address" exact component={Address} />
+          <Route path="/orders" exact component={Orders} />
+          <Route path="/order-details" exact component={OrderDetails} />
+          <Route path="/wishlist" exact component={WishList} />
           
 
           </Switch>
           <Footer/> 
-          
+        </ScrollToTop>
       </BrowserRouter>
 
   );

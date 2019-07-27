@@ -111,63 +111,63 @@ function Details() {
 							<p><span>SKU:</span> 001</p>
 							<p><span>Availability:</span> 40 in Stock</p>
 						</div>
-						<h1 class="custom-text-dark">Cotton Blend Fleece Hoodie</h1>
+						<h1 className="custom-text-dark">Cotton Blend Fleece Hoodie</h1>
 						
-						<div class="text-primary">
+						<div className="text-primary">
 							<h2>$29</h2>
 						</div>
 
 
-						<div class="tt-review">
+						<div className="tt-review">
 							<small className="">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
 							<a href="#">(1 Customer Review)</a>
 						</div>
 						<p>
 							Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 						</p>
-						<div class="row">
+						<div className="row">
 							<div className="col-md-2 text-right pt-2">
 								QTY : 
 							</div>
 							<div className="col-md-4">
 								<div className="row">
 									<div className="col-md-3 pr-0">
-										<button type="button" class="btn btn-light btn-lg w-100" onClick={() => setQtyCount(qtyCount - 1)} disabled={ (qtyCount <= 0) ? 'disabled' : ''  } > - </button>
+										<button type="button" className="btn btn-light btn-lg w-100" onClick={() => setQtyCount(qtyCount - 1)} disabled={ (qtyCount <= 0) ? 'disabled' : ''  } > - </button>
 									</div>									
 									
 									<div className="col-md-6 pl-0 pr-0">
-										<input type="text" className="form-control form-control-lg bg-light text-center" value={ qtyCount } readonly />
+										<input type="text" className="form-control form-control-lg bg-light text-center" value={ qtyCount } readOnly />
 									</div>									
 
 									<div className="col-md-3 pl-0">
-										<button type="button" class="btn btn-light btn-lg w-100" onClick={ () => setQtyCount(qtyCount + 1) }> + </button>
+										<button type="button" className="btn btn-light btn-lg w-100" onClick={ () => setQtyCount(qtyCount + 1) }> + </button>
 									</div>
 								</div>
 							</div>
 							<div className="col-md-6">
-								<button type="button" class="btn btn-primary btn-lg mr-2 rounded w-100"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+								<button type="button" className="btn btn-primary btn-lg mr-2 rounded w-100"><i className="fas fa-shopping-bag"></i> Add to Cart</button>
 							</div>
 						</div>
 
 						
 
-						<div class="row mt-5">
+						<div className="row mt-5">
 							<div className="col-md-12">
-								<button type="button" class="btn btn-warning btn-lg mr-2 rounded w-100">BUY IT NOW</button>
+								<button type="button" className="btn btn-warning btn-lg mr-2 rounded w-100">BUY IT NOW</button>
 							</div>
 						</div>
 						
-						<div class="row mt-5">
+						<div className="row mt-5">
 							<div className="col-md-12">
 								<div id="accordion2">
-		                            <div class="sidebar-header" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="headingOne">
+		                            <div className="sidebar-header" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="headingOne">
 		                                    DESCRIPTION
 		                                <span className="float-right">
-		                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+		                                    <i className="fa fa-angle-right" aria-hidden="true"></i>
 		                                </span>
 		                            </div>
 
-		                            <div id="collapseOne" class="collapse show pl-4" aria-labelledby="headingOne" data-parent="#accordion2">
+		                            <div id="collapseOne" className="collapse show pl-4" aria-labelledby="headingOne" data-parent="#accordion2">
 		                                <br/>
 		                                <p>We are proud to present our best premium Shopify theme - Wokiee.</p>
 
@@ -181,43 +181,43 @@ function Details() {
 										<p>Wokiee Shopify theme is powerfool tool to create personal webshop.</p>
 		                            </div>
 
-		                            <div class="sidebar-header" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" id="headingTwo">
+		                            <div className="sidebar-header" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" id="headingTwo">
 		                                GENERAL TAB
 		                                <span className="float-right">
-		                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+		                                    <i className="fa fa-angle-right" aria-hidden="true"></i>
 		                                </span>
 		                            </div>
 
-		                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion2">
-		                                <ul class="list-group list-group-flush">
-		                                    <li class="list-group-item">5 item</li>
-		                                    <li class="list-group-item">6 item</li>
-		                                    <li class="list-group-item">7 item</li>
-		                                    <li class="list-group-item">8 item</li>
+		                            <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion2">
+		                                <ul className="list-group list-group-flush">
+		                                    <li className="list-group-item">5 item</li>
+		                                    <li className="list-group-item">6 item</li>
+		                                    <li className="list-group-item">7 item</li>
+		                                    <li className="list-group-item">8 item</li>
 		                                </ul>
 		                            </div>
-		                            <div class="sidebar-header" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="headingThree">
+		                            <div className="sidebar-header" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="headingThree">
 		                                 REVIEW
 		                                <span className="float-right">
-		                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+		                                    <i className="fa fa-angle-right" aria-hidden="true"></i>
 		                                </span>
 		                            </div>
-		                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion2">
-		                                <ul class="list-group list-group-flush">
-		                                    <li class="list-group-item">
+		                            <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordion2">
+		                                <ul className="list-group list-group-flush">
+		                                    <li className="list-group-item">
 		                                    	<h3 className="custom-text-dark">
 		                                    		CUSTOMER REVIEWS <br/>
 		                                    		<small className="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734; <a href="#">Based on 3 reviews</a></small>
 		                                    	</h3>
 		                                    </li>
-		                                    <li class="list-group-item">
+		                                    <li className="list-group-item">
 		                                    	<small className="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
 		                                    	<h5 className="custom-text-dark">LOVE IT!</h5>
 		                                    	<small>Annon Emuss on Apr 25, 2019</small>
 		                                    	<p>Nice, simply the best.</p>
 		                                    </li>
 
-		                                    <li class="list-group-item">
+		                                    <li className="list-group-item">
 		                                    	<small className="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
 		                                    	<h5 className="custom-text-dark">BEST</h5>
 		                                    	<small>aa Das on Apr 25, 2019</small>

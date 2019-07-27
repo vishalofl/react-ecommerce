@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import "./Footer.css";
-
 
 function Footer() {
     return (
@@ -9,7 +7,7 @@ function Footer() {
         	<div className="container-fluid footer-nav">
                 <div className="row">
                     <div className="col-3 text-right pt-4">
-                        <a className="text-right">BE IN TOUCH WITH US :</a>
+                        <a className="text-right text-white">BE IN TOUCH WITH US :</a>
                     </div>
                     <div className="col-5 pt-3">
                         <div className="input-group mb-3">

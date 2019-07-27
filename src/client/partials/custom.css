@@ -7,6 +7,11 @@
     font-weight: 500;
 }
 
+.custom-font-dark{
+    color: #000000 !important;
+    font-weight: 500;
+}
+
 .btn-primary{
       color: #fff;
       background-color: #2879fe !important;
@@ -20,11 +25,10 @@
 
 a {
     color: #191919 !important;
+    text-decoration: none !important;
 }
 
 p{
-  font-size: 15px;
-    font-weight: 300;
     line-height: 22px;
     color: #777777;
 }
@@ -77,6 +81,11 @@ label{
 .custom-li li a {
   text-decoration: none;
   cursor: pointer;
+}
+
+.dashboard-list li a:hover{
+  background-color: #f5faff !important;
+  color: #2874f0 !important;
 }
 
 
