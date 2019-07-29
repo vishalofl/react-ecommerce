@@ -65,7 +65,7 @@ function Homeone() {
                 <div className="row">
                     <div className="col-6 my-4">
                         <div className="img-wrapper">
-                            <img className="img-fluid" src="/assets/images/demo10_01_1024x.webp" />
+                            <img className="img-fluid" src="/assets/images/demo10_01_1024x.webp" alt=""/>
                             <Link to="/home">
                                 <button className="btn">WOMEN</button>
                             </Link>
@@ -73,7 +73,7 @@ function Homeone() {
                     </div>
                     <div className="col-6 my-4">
                         <div className="img-wrapper">
-                            <img className="img-fluid" src="/assets/images/demo10_02_1024x.webp"  />
+                            <img className="img-fluid" src="/assets/images/demo10_02_1024x.webp"  alt="" />
                           <button className="btn">MEN</button>
                         </div>
                     </div>
@@ -81,13 +81,13 @@ function Homeone() {
                 <div className="row">
                     <div className="col-6 my-4">
                         <div className="img-wrapper">
-                            <img className="img-fluid" src="/assets/images/demo10_03_800x.jpg"  />
+                            <img className="img-fluid" src="/assets/images/demo10_03_800x.jpg" alt="" />
                             <button className="btn">SHOES</button>
                         </div>    
                     </div>
                     <div className="col-6 my-4">
                         <div className="img-wrapper">
-                            <img className="img-fluid" src="/assets/images/demo10_04_800x.jpg"  />
+                            <img className="img-fluid" src="/assets/images/demo10_04_800x.jpg" alt="" />
                             <button className="btn">ACCESSORIES</button>
                         </div>
 

@@ -1,9 +1,10 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import { Link } from "react-router-dom";
 import Sidebar from './Sidebar'; 
 
 
 function Account() {
+
 
     const monthNames = ["January", "February", "March", "April", "May", "June",
       "July", "August", "September", "October", "November", "December"
@@ -17,8 +18,8 @@ function Account() {
     var d = new Date();
     var n = d.getFullYear();
     const years = [];
-    for(var i = 1920; i <= n; i++) {
-        years.push(i)
+    for(var j = 1920; j <= n; j++) {
+        years.push(j)
     }
     const yearsAsc = years.reverse();
 
@@ -36,12 +37,12 @@ function Account() {
                         <form>
                             <div className="form-row">
                                 <div className="form-group col-md-6">
-                                    <label htmlFor="inputEmail4">Email</label><small className="float-right pr-2">edit</small>
-                                    <input type="email" className="form-control" id="inputEmail4" value="vishalgaikwad1718@gmail.com" placeholder="Email" readOnly />
+                                    <label htmlFor="inputEmail">Email</label><small className="float-right pr-2">edit</small>
+                                    <input type="email" className="form-control" id="inputEmail" value="vishalgaikwad1718@gmail.com" placeholder="Email" readOnly />
                                 </div>
                                 <div className="form-group col-md-6">
-                                    <label htmlFor="inputPassword4">Password</label><small className="float-right pr-2">edit</small>
-                                    <input type="password" className="form-control" id="inputPassword4" value="v123456789" placeholder="Password" readOnly />
+                                    <label htmlFor="inputPassword">Password</label><small className="float-right pr-2">edit</small>
+                                    <input type="password" className="form-control" id="inputPassword" value="v123456789" placeholder="Password" readOnly />
                                 </div>
                             </div>
 
@@ -49,26 +50,26 @@ function Account() {
                             <h3 className="custom-text-dark">GENERAL Information</h3>
                             <div className="form-row">
                                 <div className="form-group col-md-6">
-                                    <label htmlFor="inputAddress">First Name</label>
-                                    <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
+                                    <label htmlFor="inputFirstName">First Name</label>
+                                    <input type="text" className="form-control" id="inputFirstName" placeholder="1234 Main St" />
                                 </div>
                                 <div className="form-group col-md-6">
-                                    <label htmlFor="inputAddress">Last Name</label>
-                                <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
+                                    <label htmlFor="inputLastName">Last Name</label>
+                                <input type="text" className="form-control" id="inputLastName" placeholder="1234 Main St" />
                                 </div>
                             </div>
 
                             <div className="form-row">
                                 <div className="form-group col-md-6">
-                                    <label htmlFor="inputAddress">Mobile No</label>
-                                    <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
+                                    <label htmlFor="inputMobileNo">Mobile No</label>
+                                    <input type="text" className="form-control" id="inputMobileNo" placeholder="1234 Main St" />
                                 </div>
 
                                 <div className="form-group col-md-6">
                                     <div className="row">
                                         <div className="form-group col-md-4">
-                                            <label htmlFor="inputEmail4">Date of Birth ( Day )</label>
-                                            <select className="form-control" id="sel1">
+                                            <label>Date of Birth ( Day )</label>
+                                            <select className="form-control" id="day">
                                                     
                                                 {days.map((item, key) => {
                                                   return (
@@ -81,8 +82,8 @@ function Account() {
                                             </select>
                                         </div>
                                         <div className="form-group col-md-4">
-                                            <label htmlFor="inputEmail4">Month</label>
-                                            <select className="form-control" id="sel1">
+                                            <label>Month</label>
+                                            <select className="form-control" id="month">
                                                 
                                                 {monthNames.map((item, key) => {
                                                   return (
@@ -91,12 +92,12 @@ function Account() {
                                                     </option>
                                                   );
                                                 })}
-                                              </select>
+                                            </select>
                                         </div>
                                         <div className="form-group col-md-4">
-                                            <label htmlFor="inputEmail4">Year</label>
+                                            <label>Year</label>
 
-                                            <select className="form-control" id="sel1">
+                                            <select className="form-control" id="year">
                                                 {yearsAsc.map((item, key) => {
                                                   return (
                                                     <option value={item} key={key}>
@@ -104,7 +105,7 @@ function Account() {
                                                     </option>
                                                   );
                                                 })}
-                                              </select>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>

@@ -12,6 +12,7 @@ import Homeone from './client/home/Homeone';
 import Details from './client/details/Details';
 import Cart from './client/cart/Cart';
 import Checkout from './client/checkout/Checkout';
+import Payment from './client/checkout/Payment';
 import ClientLogin from './client/login-register/ClientLogin';
 import ClientRegister from './client/login-register/ClientRegister';
 import Account from './client/dashboard/Account';
@@ -48,6 +49,7 @@ function App() {
           <Route path="/cart" exact component={Cart} />
           
           <Route path="/checkout" exact component={Checkout} />
+          <Route path="/payment" exact component={Payment} />
           <Route path="/register" exact component={ClientRegister} />
           <Route path="/login" exact component={ClientLogin} />
           <Route path="/account" exact component={Account} />

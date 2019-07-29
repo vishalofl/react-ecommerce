@@ -4,221 +4,185 @@ import { Link } from "react-router-dom";
 
 function Checkout() {
     return (
-        <div className="container">
-        	<div className="py-5 text-center">
-		        <h2>Checkout form</h2>
-		        <p className="lead">Below is an example form built entirely with Bootstrap's form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+
+    	<div className="container-fluid details_page">
+		   	<div className="row pb-5">
+		        <div className="col-lg-7 bg-white pt-3 mr-4 ml-5">
+                        <div className="row py-2">
+                            
+                            <div className="col-sm-6">
+                                <h4 className="custom-font-dark text-uppercase">Delivery Address</h4>
+                            </div>
+
+                            <div className="col-sm-6 text-right">
+                                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> ADD NEW ADDRESS</button>
+                            </div>
+                        </div>
+                        <div className="row">
+
+                            <div className="col-sm-12 mb-1">
+                            	<table class="table border-0">
+								  	<tbody>
+								    	<tr>
+								      		<td className="text-right">
+								      			<div class="custom-control custom-radio">
+									    			<input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" />
+									    			<label class="custom-control-label" for="customControlValidation2"></label>
+									  			</div>
+								      		</td>
+									      	<td>
+									      		<div className="card-body p-0">
+			                                        <h5 className="card-title">Vishal Gaikwad</h5>
+			                                        <p className="card-text">
+			                                            1st Floor, the playce, Marathon Maxima, Lal Bahadur Shastri Road, Moti Nagar,
+			                                            <br/>
+			                                            Mulund West
+			                                            <br/>
+			                                            Mumbai - 400080
+			                                            <br/>
+			                                            Maharashtra
+			                                        </p>
+			                                        <p className="card-text">Mobile: 9923113288</p>
+			                                    </div>
+									      	</td>
+									      	<td>
+	                                            <span data-toggle="modal" data-target="#exampleModal" className="text-primary card-btn"><i class="fas fa-pencil-alt fa-2x"></i></span>
+									      	</td>
+									      	<td>
+									      		<span className="text-danger card-btn"><i class="far fa-trash-alt fa-2x"></i></span>
+									      	</td>
+									    </tr>
+
+									    <tr>
+								      		<td>
+								      			<div class="custom-control custom-radio">
+									    			<input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" />
+									    			<label class="custom-control-label" for="customControlValidation3"></label>
+									  			</div>
+								      		</td>
+									      	<td>
+									      		<div className="card-body">
+			                                        <h5 className="card-title">Vishal Gaikwad</h5>
+			                                        <p className="card-text">
+			                                            1st Floor, the playce, Marathon Maxima, Lal Bahadur Shastri Road, Moti Nagar,
+			                                            <br/>
+			                                            Mulund West
+			                                            <br/>
+			                                            Mumbai - 400080
+			                                            <br/>
+			                                            Maharashtra
+			                                        </p>
+			                                        <p className="card-text">Mobile: 9923113288</p>
+			                    
+			                                    </div>
+									      	</td>
+									      	<td>
+	                                            <span data-toggle="modal" data-target="#exampleModal" className="text-primary card-btn"><i class="fas fa-pencil-alt fa-2x"></i></span>
+									      	</td>
+									      	<td>
+									      		<span className="text-danger card-btn"><i class="far fa-trash-alt fa-2x"></i></span>
+									      	</td>
+									    </tr>
+								  </tbody>
+								</table>
+                            </div>
+
+                            <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div className="modal-dialog" role="document">
+                                    <div className="modal-content">
+                                        <div className="modal-header">
+                                            <h5 className="modal-title font-weight-bold" id="exampleModalLabel">EDIT ADDRESS</h5>
+                                        </div>
+                                        <div className="modal-body">
+                                            <div className="form-group">
+                                                {/*<label htmlFor="inputAddress">Name <small className="float-right text-danger">*</small></label>*/}
+                                                <input type="text" className="form-control  custom-font-dark text-uppercase" id="inputAddress" placeholder="name" />
+                                            </div>
+                                            <div className="form-group">
+                                                {/*<label htmlFor="inputAddress">Moblie No <small className="float-right text-danger">*</small></label>*/}
+                                                <input type="text" className="form-control  custom-font-dark text-uppercase" id="inputAddress" placeholder="mobile" />
+                                            </div>
+
+                                            <div className="form-row">
+                                                <div className="form-group col-md-6">
+                                                    {/*<label htmlFor="inputAddress">Pin Code</label>*/}
+                                                    <input type="text" className="form-control  custom-font-dark text-uppercase" id="inputAddress" placeholder="pin code" />
+                                                </div>
+                                                <div className="form-group col-md-6">
+                                                    {/*<label htmlFor="inputAddress">State</label>*/}
+                                                <input type="text" className="form-control  custom-font-dark text-uppercase" id="inputAddress" placeholder="state" />
+                                                </div>
+                                            </div>
+
+                                            <div className="form-group">
+                                                {/*<label htmlFor="inputAddress">Address (House No, Buliding, Street, Area) </label>*/}
+                                                <textarea className="form-control  custom-font-dark text-uppercase" placeholder="address"></textarea>
+                                            </div>
+
+                                            <div className="form-group">
+                                                {/*<label htmlFor="inputAddress">Locality <small className="float-right text-danger">*</small></label>*/}
+                                                <input type="text" className="form-control  custom-font-dark text-uppercase" id="inputAddress" placeholder="locality" />
+                                            </div>
+
+                                            <div className="form-group">
+                                                {/*<label htmlFor="inputAddress">City/District <small className="float-right text-danger">*</small></label>*/}
+                                                <input type="text" className="form-control  custom-font-dark text-uppercase" id="inputAddress" placeholder="district" />
+                                            </div>
+
+
+                                            <div className="form-group">
+                                                <label htmlFor="inputAddress">Address Type </label>
+                                                <br/>
+                                                <div className="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="customRadioInline1" name="customRadioInline1" className="custom-control-input" />
+                                                    <label className="custom-control-label" htmlFor="customRadioInline1">Office</label>
+                                                </div>
+                                                <div className="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="customRadioInline2" name="customRadioInline1" className="custom-control-input" />
+                                                    <label className="custom-control-label" htmlFor="customRadioInline2">Home</label>
+                                                </div>
+                                            </div>
+
+                                            <div className="form-group">
+                                                <div className="custom-control custom-checkbox">
+                                                    <input type="checkbox" className="custom-control-input" id="customCheck1" />
+                                                    <label className="custom-control-label" htmlFor="customCheck1">Make this as my Default Address</label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div className="modal-footer">
+                                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" className="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+		        <div className="col-lg-4 bg-white pt-3 ">
+		        	<div className="bg-light px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
+		          	<div className="p-4">
+		            	<p className="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
+		            	<ul className="list-unstyled mb-4">
+		              		<li className="d-flex justify-content-between py-3 border-bottom"><strong className="text-muted">Order Subtotal </strong><strong>$390.00</strong></li>
+		              		<li className="d-flex justify-content-between py-3 border-bottom"><strong className="text-muted">Shipping and handling</strong><strong>$10.00</strong></li>
+		              		<li className="d-flex justify-content-between py-3 border-bottom"><strong className="text-muted">Tax</strong><strong>$0.00</strong></li>
+		              		<li className="d-flex justify-content-between py-3 border-bottom"><strong className="text-muted">Total</strong>
+		                		<h5 className="font-weight-bold">$400.00</h5>
+		              		</li>
+		            	</ul>
+		            	<Link to="/payment" className="btn btn-primary py-2 btn-block text-white">Procceed to Payment</Link>
+		          	</div>
+		    	</div>
 		    </div>
-
-		    <div className="row">
-		        <div className="col-md-4 order-md-2 mb-4">
-		          	<h4 className="d-flex justify-content-between align-items-center mb-3">
-		            	<span className="text-muted">Your cart</span>
-		            	<span className="badge badge-secondary badge-pill">3</span>
-		          	</h4>
-		          	<ul className="list-group mb-3">
-			            <li className="list-group-item d-flex justify-content-between lh-condensed">
-			            	<div>
-			                	<h6 className="my-0">Product name</h6>
-			                	<small className="text-muted">Brief description</small>
-			              	</div>
-			              	<span className="text-muted">$12</span>
-			            </li>
-			            <li className="list-group-item d-flex justify-content-between lh-condensed">
-			              	<div>
-			                	<h6 className="my-0">Second product</h6>
-			                	<small className="text-muted">Brief description</small>
-			              	</div>
-			              	<span className="text-muted">$8</span>
-			            </li>
-			            <li className="list-group-item d-flex justify-content-between lh-condensed">
-			              	<div>
-			                	<h6 className="my-0">Third item</h6>
-			                	<small className="text-muted">Brief description</small>
-			              	</div>
-			              	<span className="text-muted">$5</span>
-			            </li>
-			            <li className="list-group-item d-flex justify-content-between bg-light">
-			              	<div className="text-success">
-			                	<h6 className="my-0">Promo code</h6>
-			                	<small>EXAMPLECODE</small>
-			              	</div>
-			              	<span className="text-success">-$5</span>
-			            </li>
-			            <li className="list-group-item d-flex justify-content-between">
-			              	<span>Total (USD)</span>
-			              	<strong>$20</strong>
-			            </li>
-		          	</ul>
-
-			        <form className="card p-2">
-			            <div className="input-group">
-			              <input type="text" className="form-control" placeholder="Promo code" />
-			              <div className="input-group-append">
-			                <button type="submit" className="btn btn-secondary">Redeem</button>
-			              </div>
-			            </div>
-			        </form>
-		        </div>
-
-
-		        <div className="col-md-8 order-md-1">
-		          	<h4 className="mb-3">Billing address</h4>
-			        <form className="needs-validation" novalidate>
-			            <div className="row">
-			              	<div className="col-md-6 mb-3">
-			                	<label>First name</label>
-			                	<input type="text" className="form-control" id="firstName" placeholder="" value="" required />
-			                	<div className="invalid-feedback">
-			                  		Valid first name is required.
-		                		</div>
-			              	</div>
-			              	<div className="col-md-6 mb-3">
-			                	<label>Last name</label>
-			                	<input type="text" className="form-control" id="lastName" placeholder="" value="" required />
-			                	<div className="invalid-feedback">
-			                  		Valid last name is required.
-			                	</div>
-			              	</div>
-			            </div>
-
-		              	<div className="mb-3">
-			              	<label>Username</label>
-			              	<div className="input-group">
-			                	<div className="input-group-prepend">
-			                  		<span className="input-group-text">@</span>
-			                	</div>
-		                		<input type="text" className="form-control" id="username" placeholder="Username" required="" />
-			                	<div className="invalid-feedback" style={{'width': '100%'}}>
-			                  		Your username is required.
-			                	</div>
-			              	</div>
-			            </div>
-
-			            <div className="mb-3">
-			              	<label>Email <span className="text-muted">(Optional)</span></label>
-			              	<input type="email" className="form-control" id="email" placeholder="you@example.com" />
-			              	<div className="invalid-feedback">
-			                	Please enter a valid email address for shipping updates.
-			              	</div>
-			            </div>
-
-			            <div className="mb-3">
-			              	<label>Address</label>
-			              	<input type="text" className="form-control" id="address" placeholder="1234 Main St" required />
-			              	<div className="invalid-feedback">
-			                	Please enter your shipping address.
-			              	</div>
-			            </div>
-
-			            <div className="mb-3">
-			              	<label>Address 2 <span className="text-muted">(Optional)</span></label>
-			              	<input type="text" className="form-control" id="address2" placeholder="Apartment or suite" />
-			            </div>
-
-			            <div className="row">
-			              	<div className="col-md-5 mb-3">
-			                	<label >Country</label>
-			                	<select className="custom-select d-block w-100" id="country" required>
-			                  		<option value="">Choose...</option>
-			                  		<option>United States</option>
-			                	</select>
-			                	<div className="invalid-feedback">
-			                 	 	Please select a valid country.
-			                	</div>
-			              	</div>
-			              	<div className="col-md-4 mb-3">
-			                	<label>State</label>
-			                	<select className="custom-select d-block w-100" id="state" required>
-			                  		<option value="">Choose...</option>
-			                  		<option>California</option>
-			                	</select>
-			                	<div className="invalid-feedback">
-			                  		Please provide a valid state.
-			                	</div>
-			              	</div>
-
-			              	<div className="col-md-3 mb-3">
-			                	<label>Zip</label>
-			                	<input type="text" className="form-control" id="zip" placeholder="" required />
-			                	<div className="invalid-feedback">
-			                 	 	Zip code required.
-			                	</div>
-			              	</div>
-			            </div>
-
-			            <hr className="mb-4"/>
-			            <div className="custom-control custom-checkbox">
-			              	<input type="checkbox" className="custom-control-input" id="same-address" />
-			              	<label className="custom-control-label">Shipping address is the same as my billing address</label>
-			            </div>
-			            <div className="custom-control custom-checkbox">
-			              	<input type="checkbox" className="custom-control-input" id="save-info" />
-			              	<label className="custom-control-label">Save this information for next time</label>
-			            </div>
-			            <hr className="mb-4"/>
-
-			            <h4 className="mb-3">Payment</h4>
-
-			            <div className="d-block my-3">
-			              	<div className="custom-control custom-radio">
-			                	<input id="credit" name="paymentMethod" type="radio" className="custom-control-input" checked required />
-			                	<label className="custom-control-label">Credit card</label>
-			              	</div>
-			              	<div className="custom-control custom-radio">
-			                	<input id="debit" name="paymentMethod" type="radio" className="custom-control-input" required />
-			                	<label className="custom-control-label">Debit card</label>
-			              	</div>
-			              	<div className="custom-control custom-radio">
-			                	<input id="paypal" name="paymentMethod" type="radio" className="custom-control-input" required />
-			                	<label className="custom-control-label">Paypal</label>
-			              	</div>
-			            </div>
-
-			            <div className="row">
-			              	<div className="col-md-6 mb-3">
-				                <label>Name on card</label>
-				                <input type="text" className="form-control" id="cc-name" placeholder="" required />
-				                <small className="text-muted">Full name as displayed on card</small>
-				                <div className="invalid-feedback">
-				                  Name on card is required
-				                </div>
-			              	</div>
-			              	<div className="col-md-6 mb-3">
-				                <label>Credit card number</label>
-				                <input type="text" className="form-control" id="cc-number" placeholder="" required />
-				                <div className="invalid-feedback">
-				                  Credit card number is required
-				                </div>
-			              	</div>
-			            </div>
-
-			            <div className="row">
-			              	<div className="col-md-3 mb-3">
-				                <label>Expiration</label>
-				                <input type="text" className="form-control" id="cc-expiration" placeholder="" required />
-				                <div className="invalid-feedback">
-				                  Expiration date required
-				                </div>
-			              	</div>
-			              	<div className="col-md-3 mb-3">
-				                <label>CVV</label>
-				                <input type="text" className="form-control" id="cc-cvv" placeholder="" required />
-				                <div className="invalid-feedback">
-				                  Security code required
-				                </div>
-			              	</div>
-			            </div>
-			            <hr className="mb-4"/>
-			            <button className="btn btn-dark rounded-pill py-2 btn-block" type="submit">Continue to checkout</button>
-			            <hr className="my-5 pt-5"/>
-			        </form>
-		         </div>   
-
-
-		    </div>
-
         </div>
+
+
+
+       
   );
 }
 

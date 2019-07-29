@@ -24,7 +24,7 @@ function Sidebar({history}) {
                 <div className="card-body bg-white">
                     <div className="row">
                         <div className="col-md-3">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW85kSQOcDF7mFFbtiGoParQ07mr-_5bTDdWqEilSAB-IIyGnb" className="img-fluid"/>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW85kSQOcDF7mFFbtiGoParQ07mr-_5bTDdWqEilSAB-IIyGnb" className="img-fluid" alt=""/>
                         </div>
                         <div className="col-md-9">
                             <small>Hello</small>
@@ -58,7 +58,6 @@ function Sidebar({history}) {
                     <ul className="dashboard-list mt-2 px-0">
                         <li className={ "cust-sidebar-link " + (isActive(history,"/account")) } ><Link to="/account">Profile Information</Link> </li>
                         <li className={ "cust-sidebar-link " + (isActive(history,"/address")) }><Link to="/address">Manage Address</Link></li>
-                        <li>PAN Card Information</li>
                     </ul>
 
                     <ul className="list-group list-group-flush">

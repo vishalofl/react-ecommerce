@@ -6,20 +6,17 @@ import { signup } from './apicall';
 function ClientRegister() {
     
 	const [values, setValues] = useState({
-								firstname:'',
-								lastname:'',
 								email:'',
 								password:'',
 								error:'',
 								success:false
 							});
 
-
 	const handleChange = (name) => (event) => {
 		setValues({...values, error:false, [name]: event.target.value })
 	}
 
-	const { firstname, lastname, email, password, success, error } = values; 
+	const { email, password, success, error } = values; 
 
 	const clickSubmit = (e) => {
 
@@ -27,15 +24,14 @@ function ClientRegister() {
 
 		setValues({...values, error:false })
 
-
-		const userFormData = {firstname,lastname,email,password}
+		const userFormData = { email,password }
 
 		signup(userFormData).then(data => {
 
 			if (data.error) {
 				setValues({ ...values, error:data.error, success:false })
 			} else {
-				setValues({ ...values, firstname:'', lastname:'', email:'', password:'', error:'', success:true })
+				setValues({ ...values, email:'', password:'', error:'', success:true })
 			}
 		}).catch((err) => {
 			console.log(err)
@@ -46,17 +42,6 @@ function ClientRegister() {
 	const RegisterForm = () => (
 
 		<form>
-	  		<div className="form-group">
-              	<label htmlFor="firstName" className="small">FRIST NAME <sup className="text-danger">*</sup></label>
-              	<div className="text-muted float-right">* Required Fields</div>
-              	<input type="text" onChange={handleChange('firstname')} value={firstname} className="form-control bg-light" id="firstName" placeholder="Enter First Name" autoComplete="off" />
-            </div>
-
-            <div className="form-group">
-              	<label htmlFor="lastName" className="small">LAST NAME </label>
-              	<input type="text" onChange={handleChange('lastname')} value={lastname} className="form-control bg-light" id="lastName" placeholder="Enter First Name" autoComplete="off" />
-            </div>
-
             <div className="form-group">
               	<label htmlFor="email" className="small">EMAIL<sup className="text-danger">*</sup></label>
               	<input type="email" onChange={handleChange('email')} value={email} className="form-control bg-light" id="email" placeholder="Enter Email" autoComplete="off" />
@@ -66,7 +51,21 @@ function ClientRegister() {
               	<label htmlFor="password" className="small">PASSWORD<sup className="text-danger">*</sup></label>
               	<input type="password" onChange={handleChange('password')} value={password} className="form-control bg-light" id="password" placeholder="Enter Password" autoComplete="off" />
             </div>
-	  		<button type="button" onClick={clickSubmit} className="btn btn-outline-primary"> CREATE ACCOUNT</button>
+	  		<button type="button" onClick={clickSubmit} className="btn btn-primary w-100"> CREATE ACCOUNT</button>
+	  		
+	  		<br/>
+	  		<br/>
+	  		<p className="text-center">- OR SIGN UP USING -</p>
+	  		<hr/>
+	  		<div className="row">
+	  			<div className="col-md-6">
+	  				<button type="button" className="btn btn-lg w-100 cust-signup-btn shadow-sm"><img src="/assets/images/facebook.png" alt="Facebook" /> <p>FACEBOOK</p></button>
+	  			</div>
+	  			<div className="col-md-6">
+	  				
+	  				<button type="button" className="btn btn-lg w-100 cust-signup-btn shadow-sm"><img src="/assets/images/search.png" alt="Google" /> <p>GOOGLE</p></button>
+	  			</div>
+	  		</div>
 	  	</form>
 	)
 
@@ -84,25 +83,47 @@ function ClientRegister() {
 	)
 
     return (
+
     		<div className="container-fluid details_page">
-                <div className="row bg-white py-4">
-                    <div className="col-lg-12 mb-3">
-                    	<h3 className="text-center">CREATE AN ACCOUNT</h3>
-                    </div>
-                    <div className="col-lg-6 offset-md-3 ">
-                    	<div className="card">
-						  	<div className="card-body px-5">
-						  		<h5 className="custom-text-dark">PERSONAL INFORMATION</h5>
-						  		
-						  		{showError()}
-						  		{showSuccess()}
-						  		{RegisterForm()}
-						  	
-						  	</div>
-						</div>
-                    </div>
+            <div className="row bg-white py-4 row-flex">
+                <div className="col-lg-12 mb-4">
+                	<h4 className="text-center">CREATE ACCOUNT</h4>
                 </div>
+
+                <div className="col-lg-5 offset-md-1">
+                	
+                	<div className="card content">
+					  <div className="card-body">
+					  	<h5 className="custom-text-dark">ALREADY REGISTERED?</h5>
+					  	<p>
+					  		By loging with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.
+					  	</p>
+
+					  	<Link className="btn btn-outline-primary cust-link-tag-btn" to="/login">LOGIN TO ACCOUNT</Link>
+					  </div>
+					</div>
+                </div>
+
+                <div className="col-lg-5">
+                	
+                	<div className="card content">
+					  <div className="card-body">
+					  	<h5 className="custom-text-dark">REGISTER</h5>
+						  	{showError()}
+					  		{showSuccess()}
+					  		{RegisterForm()}
+      						
+					  </div>
+					  {JSON.stringify(values)}
+					</div>
+                </div>
+
+               
             </div>
+        </div>
+
+
+    		
   		);
 }
 

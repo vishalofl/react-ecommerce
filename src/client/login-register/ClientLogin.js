@@ -96,9 +96,9 @@ function ClientLogin() {
     return (
            
         <div className="container-fluid details_page">
-            <div className="row bg-white py-5 row-flex">
-                <div className="col-lg-12 mb-5">
-                	<h3 className="text-center">ALREADY REGISTERED?</h3>
+            <div className="row bg-white py-4 row-flex">
+                <div className="col-lg-12 mb-4">
+                	<h4 className="text-center">ALREADY REGISTERED?</h4>
                 </div>
 
                 <div className="col-lg-5 offset-md-1">
