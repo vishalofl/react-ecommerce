@@ -23,12 +23,12 @@ import OrderDetails from './client/dashboard/OrderDetails';
 import WishList from './client/dashboard/WishList';
 
 /*ADMIN ROUTES*/
-import Login from './admin/Login';
+// import Login from './admin/Login';
 // import Dashboard from './admin/Dashboard';
-import Category from './admin/Category';
-import CategoryForm from './admin/CategoryForm';
-import Product from './admin/Product';
-import ProductForm from './admin/ProductForm';
+// import Category from './admin/Category';
+// import CategoryForm from './admin/CategoryForm';
+// import Product from './admin/Product';
+// import ProductForm from './admin/ProductForm';
 
 
 function App() {
@@ -41,23 +41,19 @@ function App() {
       <ScrollToTop>
           <Navbar/>
           <Switch>
-          <Route path="/" exact component={Homeone} />
-
           <Route path="/home" exact component={Home} />
+          <Route path="/" exact component={Homeone} />
           <Route path="/product-details" exact component={Details} />
-
           <Route path="/cart" exact component={Cart} />
-          
           <Route path="/checkout" exact component={Checkout} />
           <Route path="/payment" exact component={Payment} />
-          <Route path="/register" exact component={ClientRegister} />
           <Route path="/login" exact component={ClientLogin} />
+          <Route path="/register" exact component={ClientRegister} />
           <Route path="/account" exact component={Account} />
-          <Route path="/address" exact component={Address} />
           <Route path="/orders" exact component={Orders} />
+          <Route path="/address" exact component={Address} />
           <Route path="/order-details" exact component={OrderDetails} />
           <Route path="/wishlist" exact component={WishList} />
-          
 
           </Switch>
           <Footer/> 

@@ -21,13 +21,13 @@ function Checkout() {
                         <div className="row">
 
                             <div className="col-sm-12 mb-1">
-                            	<table class="table border-0">
+                            	<table className="table border-0">
 								  	<tbody>
 								    	<tr>
 								      		<td className="text-right">
-								      			<div class="custom-control custom-radio">
-									    			<input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" />
-									    			<label class="custom-control-label" for="customControlValidation2"></label>
+								      			<div className="custom-control custom-radio">
+									    			<input type="radio" className="custom-control-input" id="customControlValidation2" name="radio-stacked" />
+									    			<label className="custom-control-label" htmlFor="customControlValidation2"></label>
 									  			</div>
 								      		</td>
 									      	<td>
@@ -46,18 +46,18 @@ function Checkout() {
 			                                    </div>
 									      	</td>
 									      	<td>
-	                                            <span data-toggle="modal" data-target="#exampleModal" className="text-primary card-btn"><i class="fas fa-pencil-alt fa-2x"></i></span>
+	                                            <span data-toggle="modal" data-target="#exampleModal" className="text-primary card-btn"><i className="fas fa-pencil-alt fa-2x"></i></span>
 									      	</td>
 									      	<td>
-									      		<span className="text-danger card-btn"><i class="far fa-trash-alt fa-2x"></i></span>
+									      		<span className="text-danger card-btn"><i className="far fa-trash-alt fa-2x"></i></span>
 									      	</td>
 									    </tr>
 
 									    <tr>
 								      		<td>
-								      			<div class="custom-control custom-radio">
-									    			<input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" />
-									    			<label class="custom-control-label" for="customControlValidation3"></label>
+								      			<div className="custom-control custom-radio">
+									    			<input type="radio" className="custom-control-input" id="customControlValidation3" name="radio-stacked" />
+									    			<label className="custom-control-label" htmlFor="customControlValidation3"></label>
 									  			</div>
 								      		</td>
 									      	<td>
@@ -77,10 +77,10 @@ function Checkout() {
 			                                    </div>
 									      	</td>
 									      	<td>
-	                                            <span data-toggle="modal" data-target="#exampleModal" className="text-primary card-btn"><i class="fas fa-pencil-alt fa-2x"></i></span>
+	                                            <span data-toggle="modal" data-target="#exampleModal" className="text-primary card-btn"><i className="fas fa-pencil-alt fa-2x"></i></span>
 									      	</td>
 									      	<td>
-									      		<span className="text-danger card-btn"><i class="far fa-trash-alt fa-2x"></i></span>
+									      		<span className="text-danger card-btn"><i className="far fa-trash-alt fa-2x"></i></span>
 									      	</td>
 									    </tr>
 								  </tbody>

@@ -8,6 +8,7 @@ function ClientRegister() {
 	const [values, setValues] = useState({
 								email:'',
 								password:'',
+								mobile:'',
 								error:'',
 								success:false
 							});
@@ -16,7 +17,7 @@ function ClientRegister() {
 		setValues({...values, error:false, [name]: event.target.value })
 	}
 
-	const { email, password, success, error } = values; 
+	const { email, password, mobile, success, error } = values; 
 
 	const clickSubmit = (e) => {
 
@@ -31,7 +32,7 @@ function ClientRegister() {
 			if (data.error) {
 				setValues({ ...values, error:data.error, success:false })
 			} else {
-				setValues({ ...values, email:'', password:'', error:'', success:true })
+				setValues({ ...values, email:'', password:'', mobile:'', error:'', success:true })
 			}
 		}).catch((err) => {
 			console.log(err)
@@ -51,6 +52,12 @@ function ClientRegister() {
               	<label htmlFor="password" className="small">PASSWORD<sup className="text-danger">*</sup></label>
               	<input type="password" onChange={handleChange('password')} value={password} className="form-control bg-light" id="password" placeholder="Enter Password" autoComplete="off" />
             </div>
+          
+            <div className="form-group">
+              	<label htmlFor="mobile" className="small">Mobile<sup className="text-danger">*</sup></label>
+              	<input type="text" onChange={handleChange('mobile')} value={mobile} className="form-control bg-light" id="mobile" placeholder="Enter Mobile No" autoComplete="off" />
+            </div>
+
 	  		<button type="button" onClick={clickSubmit} className="btn btn-primary w-100"> CREATE ACCOUNT</button>
 	  		
 	  		<br/>

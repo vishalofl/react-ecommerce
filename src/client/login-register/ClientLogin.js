@@ -64,8 +64,20 @@ function ClientLogin() {
                   <input type="password" onChange={handleChange('password')} value={password} className="form-control bg-light" id="loginInputEmail" placeholder="Enter Password" />
                 </div>
                 <div className="form-group">
-                  <button className="btn btn-outline-primary" type="button" onClick={clickSubmit}>LOGIN</button>
+                  <button className="btn btn-outline-primary w-100" type="button" onClick={clickSubmit}>LOGIN</button>
                 </div>
+
+		  		<br/>
+		  		<p className="text-center">- OR EASILY USING -</p>
+		  		<hr/>
+		  		<div className="row">
+		  			<div className="col-md-6">
+		  				<button type="button" className="btn btn-lg w-100 cust-signup-btn shadow-sm"><img src="/assets/images/facebook.png" alt="Facebook" /> <p>FACEBOOK</p></button>
+		  			</div>
+		  			<div className="col-md-6">
+		  				<button type="button" className="btn btn-lg w-100 cust-signup-btn shadow-sm"><img src="/assets/images/search.png" alt="Google" /> <p>GOOGLE</p></button>
+		  			</div>
+		  		</div>
 
 			</form>
 

@@ -12,7 +12,7 @@ function Cart() {
 			            <table className="table">
 			              	<thead>
 				                <tr>
-				                  	<th scope="col" className="border-0 bg-light align-middle" colspan="2">
+				                  	<th scope="col" className="border-0 bg-light align-middle" colSpan="2">
 				                    	<div className="p-2 px-3 text-uppercase">Product</div>
 				                  	</th>
 				                  	<th scope="col" className="border-0 bg-light">
@@ -40,7 +40,7 @@ function Cart() {
 
 				                  	<td className="border-0 align-middle"><strong>$79.00</strong></td>
 				                  	<td className="border-0 align-middle"><strong>3</strong></td>
-				                  	<td className="border-0 align-middle"><Link to="" className="text-dark"><span className="text-danger card-btn"><i class="far fa-trash-alt fa-lg"></i></span></Link></td>
+				                  	<td className="border-0 align-middle"><Link to="" className="text-dark"><span className="text-danger card-btn"><i className="far fa-trash-alt fa-lg"></i></span></Link></td>
 				                </tr>
 
 				                <tr>
@@ -55,7 +55,7 @@ function Cart() {
 				                  	</td>
 				                  	<td className="align-middle"><strong>$79.00</strong></td>
 				                  	<td className="align-middle"><strong>3</strong></td>
-				                  	<td className="align-middle"><Link to="" className="text-dark"><span className="text-danger card-btn"><i class="far fa-trash-alt fa-lg"></i></span></Link>
+				                  	<td className="align-middle"><Link to="" className="text-dark"><span className="text-danger card-btn"><i className="far fa-trash-alt fa-lg"></i></span></Link>
 				                  	</td>
 				                </tr>
 				                <tr>
@@ -71,7 +71,7 @@ function Cart() {
 
 			                    	<td className="align-middle"><strong>$79.00</strong></td>
 			                    	<td className="align-middle"><strong>3</strong></td>
-			                    	<td className="align-middle"><Link to="" className="text-dark"> <span className="text-danger card-btn"><i class="far fa-trash-alt fa-lg"></i></span></Link>
+			                    	<td className="align-middle"><Link to="" className="text-dark"> <span className="text-danger card-btn"><i className="far fa-trash-alt fa-lg"></i></span></Link>
 			                    	</td>
 				                </tr>
 			              	</tbody>

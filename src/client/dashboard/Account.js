@@ -27,7 +27,7 @@ function Account() {
 
         <div>
             <div className="container-fluid details_page">
-                <div className="row pt-3">
+                <div className="row">
                     <div className="col-lg-2">
                         <Sidebar/>
                     </div>

@@ -75,8 +75,7 @@ a:focus {
 .sidebar-header{
     padding: 0.75rem 1.25rem;
     border: none;
-
-        font-size: 16px;
+    font-size: 16px;
     line-height: 26px;
     font-weight: 500;
     letter-spacing: 0.03em;
@@ -105,6 +104,11 @@ a:focus {
   width: 50%;
 }
 
+.card-body:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: .7s ease;
+}
+
 
 .overlay {
   position: absolute;
@@ -115,14 +119,20 @@ a:focus {
   overflow: hidden;
   width: 100%;
   height: 0;
-  transition: .5s ease;
+  transition: .7s ease;
+  z-index: 1;
 }
 
 .product-block:hover .overlay {
-  height: 15%;
+  height: 7%;
+
 }
 
-.card_cust 
+.product-block:hover .card-body {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*.card_cust 
 {
     position: relative;
     display: inline-block;
@@ -139,7 +149,7 @@ a:focus {
 }
 .card_cust:hover .img-top {
     display: inline;
-}
+}*/
 
 
 .custom-text-dark-panel{

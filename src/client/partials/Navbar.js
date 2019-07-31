@@ -1,7 +1,7 @@
 import React,{ useState, useEffect } from 'react';
 import { Link, withRouter } from "react-router-dom";
 
-import "./custom.css";
+// import "./custom.css";
 
 import "./Navbar.css";
 
@@ -52,7 +52,7 @@ function Navbar({ history }) {
                         </li>
 
                         <li className={ "nav-item dropdown megamenu-li " + (isActive(history,"/product-details")) }>
-                           <a className="nav-link" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SHOP</a>
+                           <a className="nav-link" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CATEGORIES</a>
                             <div className="dropdown-menu megamenu px-5" aria-labelledby="dropdown01">
                                 <div className="row">
                                     <div className="col-sm-6 col-lg-3">
@@ -86,7 +86,7 @@ function Navbar({ history }) {
                            </div>
                         </li>
 
-                        <li className={ "nav-item " + (isActive(history,"/about")) }>
+                        {/*<li className={ "nav-item " + (isActive(history,"/about")) }>
                             <Link to="" className="nav-link" to="">ABOUT</Link>
                         </li>
                         <li className={ "nav-item " + (isActive(history,"/services")) }>
@@ -98,13 +98,13 @@ function Navbar({ history }) {
 
                         <li className={ "nav-item " + (isActive(history,"/product-details")) }>
                             <Link className="nav-link" to="/product-details">DETAILS</Link>
-                        </li>
+                        </li>*/}
                         
 
                     </ul>
                     <form className="mx-2 my-auto d-inline w-100">
-                        <div className="input-group">
-                            <input type="text" className="form-control border border-right-0" placeholder="Search..." />
+                        <div className="input-group cust-navbar-search">
+                            <input type="text" className="form-control border-0" placeholder="Search for Products & more..." />
                         </div>
                     </form>
                     <div className="navbar-form navbar-right btn-group">
